@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Weather</title>
+
+    <style>
+
+        .wrapper{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            min-height: 100vh;
+
+
+        }
+
+        .insideWrapper{
+            display: flex;
+            justify-content: space-around;
+
+        }
+
+
+
+
+        .weatherForm{
+            width: 100%;
+            max-width: 500px;
+            margin-inline: auto;
+            border: 1px solid black;
+
+        }
+
+        .weatherForm:focus{
+            border: 1px solid red;
+
+        }
+
+        .search-button{
+            margin-top: 0.5rem;
+            padding: 0.5rem;
+            background-color: lightgoldenrodyellow;
+            border-radius: 0.25rem;
+            display: block;
+            margin-left: auto;
+            margin-right: 0;
+            width: 100%;
+
+        }
+
+    </style>
+    <script src="weather_src/js/weather_app.js" async defer type="module"></script>
+
+</head>
+<body>
+
+<div class="wrapper">
+
+    <form class="weatherForm" tabindex="0">
+
+       <div class="insideWrapper">
+           <label for="city">Enter city</label>
+           <input type="text" id="city">
+           <span>or</span>
+           <button type="button" id="find-me">Get city for my location</button><br/>
+       </div>
+
+
+        <button class="search-button" type="submit" id="cityButton">Get weather!</button>
+
+    </form>
+
+
+
+    <p id="status"></p>
+    <a id="map-link" target="_blank"></a>
+</div>
+
+
+
+
+</body>
+</html>
